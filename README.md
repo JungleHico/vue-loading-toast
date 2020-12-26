@@ -1,19 +1,28 @@
-# vue-loading
+# vue Loading Toast
 
-## Project setup
-```
-npm install
-```
+自定义以 Toast 弹出的 Loading 组件。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 注册
 
-### Compiles and minifies for production
-```
-npm run build
+注册组件，可以全局注册，也可以局部注册
+
+```js
+import Vue from 'vue'
+import Loading from '../components/Loading'
+
+Vue.use(Loading)
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 使用
+
+```js
+// 显示
+this.$showLoading()
+// 指定 title
+this.$showLoading({
+  title: 'loading'
+})
+
+// 隐藏
+this.$hideLoading()
+```
